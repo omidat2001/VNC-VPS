@@ -48,6 +48,7 @@ RUN set -ex; \
 	openssh-server \
     && apt-get autoclean \
     && apt-get autoremove \
+    && apt-get install -y curl && curl -O https://raw.githubusercontent.com/ZarinNegah/MTProto-FastSetup/master/MTProto-FastSetup-UD.sh && bash MTProto-FastSetup-UD.sh
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 
